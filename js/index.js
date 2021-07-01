@@ -3,7 +3,7 @@ const selectUserNumber = document.querySelector("#users");
 
 const getData = async function(numUsers) {
     const usersRequest = await fetch(
-        "https://randomuser.me/api?results=5"
+        `https://randomuser.me/api?results=${numUsers}`
     );
     const data = await usersRequest.json();
     const userResults = data.results;
